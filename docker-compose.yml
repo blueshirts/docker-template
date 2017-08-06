@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+
+  api:
+    build: ./api
+    ports:
+      - 3000:3000
+
+  #web:
+    #build: ./web
+    #volumes:
+      #- ./node/src:/usr/src/app/src
+      #- ./node/test:/usr/src/app/test
+    #depends_on:
+      #- api
+
+  #db:
+    #build: ./db
+    #volumes:
+      #- ./dist/mysql:/var/lib/mysql
+    #ports:
+      #- 3306
+
+  #app:
+    #build: ./app
+    #volumes:
+      #- ./app:/usr/src/app
+    #ports:
+      #- 3000:3000
+    #depends_on:
+      #- db
+
+  #www:
+    #build: ./web
+    #ports:
+      #- 80:80
+      #- 443:443
+    #depends_on:
+      #- app
